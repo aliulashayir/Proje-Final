@@ -1,0 +1,55 @@
+.registerFormChild {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 372px);
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 744px;
+  height: 661px;
+}
+.emlakBurada {
+  position: absolute;
+  top: 142px;
+  left: calc(50% - 83px);
+  font-size: var(--font-size-5xl);
+  line-height: 48px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--black-700);
+  text-align: center;
+}
+.enterYourInformation {
+  position: absolute;
+  top: 190px;
+  left: calc(50% - 162px);
+  line-height: 30px;
+  text-align: center;
+}
+.welcome {
+  text-transform: capitalize;
+}
+.welcomeTo {
+  position: absolute;
+  top: 112px;
+  left: calc(50% - 60px);
+  font-size: var(--font-size-xl);
+}
+.button {
+  position: absolute;
+  top: 561px;
+  left: 113px;
+  width: 521px;
+  height: 50px;
+  cursor: pointer;
+}
+.registerForm {
+  position: absolute;
+  top: 124px;
+  left: calc(50% - 372px);
+  width: 744px;
+  height: 661px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+  font-family: var(--font-poppins);
+}

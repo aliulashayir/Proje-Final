@@ -1,0 +1,160 @@
+.emlakBurada {
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 84.5px);
+  font-size: var(--font-size-5xl);
+  line-height: 48px;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--black-700);
+  text-align: center;
+}
+.pleaseLoginYour {
+  position: absolute;
+  top: 78px;
+  left: calc(50% - 106.5px);
+  line-height: 30px;
+  color: var(--black-600);
+}
+.welcome {
+  text-transform: capitalize;
+}
+.welcomeTo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 61.5px);
+  font-size: var(--font-size-xl);
+  color: var(--black-600);
+}
+.orContinueWith {
+  position: absolute;
+  top: 453px;
+  left: 183px;
+  font-size: var(--font-size-lg);
+  line-height: 30px;
+  text-align: center;
+}
+.button,
+.googleChild {
+  position: absolute;
+  left: 0;
+  height: 50px;
+}
+.button {
+  top: 381px;
+  width: 519px;
+  cursor: pointer;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+}
+.googleChild {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  border-radius: var(--br-7xs);
+  background-color: var(--white);
+  width: 235px;
+}
+.image198Icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+.google1 {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  line-height: 30px;
+}
+.image198Parent {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  width: 104px;
+  height: 30px;
+}
+.google,
+.googleWrapper {
+  position: absolute;
+  width: 235px;
+  height: 50px;
+}
+.google {
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.googleWrapper {
+  top: 533px;
+  left: 125px;
+  font-size: var(--font-size-xl);
+}
+.groupChild,
+.rememberMe {
+  position: absolute;
+  top: 0;
+  left: 34px;
+}
+.groupChild {
+  top: 2px;
+  left: 0;
+  border-radius: var(--br-11xs);
+  background-color: var(--white);
+  border: 1px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+}
+.rememberMeParent {
+  position: absolute;
+  top: 332px;
+  left: 1px;
+  width: 154px;
+  height: 24px;
+}
+.forgotPassword {
+  position: absolute;
+  top: 332px;
+  left: 376px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+.emlakBuradaParent {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 259.5px);
+  width: 519px;
+  height: 583px;
+}
+.registerNow {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.newMemberHereContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 30px;
+}
+.register {
+  position: absolute;
+  top: 583px;
+  left: 125px;
+  width: 267px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+}
+.groupParent {
+  position: absolute;
+  top: 112px;
+  left: calc(50% - 259px);
+  width: 519px;
+  height: 613px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--neutral-600);
+  font-family: var(--font-poppins);
+}

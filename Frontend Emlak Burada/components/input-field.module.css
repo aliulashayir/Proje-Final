@@ -1,0 +1,30 @@
+.email,
+.inputFieldChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.inputFieldChild {
+  top: 29px;
+  border-radius: var(--br-7xs);
+  background-color: var(--color-whitesmoke-200);
+  width: 518px;
+  height: 50px;
+}
+.inputField,
+.kamrulgmailcom {
+  position: absolute;
+  top: 42px;
+  left: 16px;
+  color: var(--color-darkgray-100);
+}
+.inputField {
+  top: 137px;
+  left: 1px;
+  width: 518px;
+  height: 79px;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--neutral-600);
+  font-family: var(--font-poppins);
+}

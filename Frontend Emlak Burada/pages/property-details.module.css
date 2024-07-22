@@ -1,0 +1,303 @@
+.propertyDetailsChild,
+.propertyDetailsInner,
+.propertyDetailsItem {
+  position: absolute;
+  left: 0;
+  background-color: var(--white);
+  width: 1920px;
+  height: 100px;
+}
+.propertyDetailsChild {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.propertyDetailsInner,
+.propertyDetailsItem {
+  top: 103px;
+}
+.propertyDetailsInner {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 310px;
+  height: 1207px;
+}
+.logoIcon {
+  position: absolute;
+  top: 51px;
+  left: 85px;
+  width: 140px;
+  height: 32px;
+}
+.property {
+  position: absolute;
+  top: 141px;
+  left: 356px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--black-800);
+}
+.propertyChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--primary-color);
+  width: 270px;
+  height: 45px;
+}
+.property2 {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+  font-weight: 500;
+}
+.property1,
+.tenantsChild {
+  position: absolute;
+  width: 270px;
+  height: 45px;
+}
+.property1 {
+  top: 206px;
+  left: 20px;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+}
+.tenantsChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+}
+.packages {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+}
+.dashboard,
+.tenants {
+  position: absolute;
+  top: 281px;
+  left: 20px;
+  width: 270px;
+  height: 45px;
+  font-size: var(--font-size-xl);
+}
+.dashboard {
+  top: 131px;
+  cursor: pointer;
+}
+.ellipseDiv {
+  position: absolute;
+  top: 36px;
+  left: 344px;
+  border-radius: 50%;
+  background-color: var(--white-shade-1);
+  width: 28px;
+  height: 28px;
+}
+.english {
+  position: absolute;
+  top: 42px;
+  left: 381px;
+  font-size: var(--font-size-sm);
+  line-height: 120%;
+}
+.groupChild,
+.groupInner,
+.groupItem {
+  position: absolute;
+  top: -0.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  width: 16.8px;
+  height: 1px;
+}
+.groupInner,
+.groupItem {
+  top: 4.8px;
+}
+.groupInner {
+  top: 10px;
+}
+.lineParent,
+.rectangleIcon {
+  position: absolute;
+  top: 44.8px;
+  left: 350.1px;
+  width: 15.8px;
+  height: 10.5px;
+}
+.rectangleIcon {
+  top: 252px;
+  left: 340px;
+  border-radius: var(--br-5xs);
+  width: 750px;
+  height: 400px;
+  object-fit: cover;
+}
+.propertyDetailsChild1 {
+  left: 600px;
+  object-fit: cover;
+}
+.propertyDetailsChild1,
+.propertyDetailsChild2,
+.propertyDetailsChild3,
+.rectangleDiv {
+  position: absolute;
+  top: 682px;
+  border-radius: var(--br-9xs);
+  width: 230px;
+  height: 140px;
+}
+.propertyDetailsChild2 {
+  left: 340px;
+  object-fit: cover;
+}
+.propertyDetailsChild3,
+.rectangleDiv {
+  left: 860px;
+}
+.propertyDetailsChild3 {
+  object-fit: cover;
+}
+.rectangleDiv {
+  background-color: rgba(137, 137, 137, 0.34);
+}
+.oceanviewRetreat,
+.propertyInformation {
+  position: absolute;
+  top: 251px;
+  left: 1120px;
+  font-size: var(--font-size-xl);
+  line-height: 120%;
+  font-weight: 500;
+  color: var(--black-800);
+}
+.propertyInformation {
+  top: 466px;
+}
+.welcomeToOceanview {
+  position: absolute;
+  top: 289px;
+  left: 1120px;
+  font-weight: 300;
+  display: inline-block;
+  width: 750px;
+  height: 173px;
+}
+.span {
+  color: var(--black-600);
+  white-space: pre-wrap;
+}
+.oceanviewDriveMiami {
+  color: var(--black-700);
+}
+.propertyAddressContainer {
+  position: absolute;
+  top: 607px;
+  left: 1120px;
+  display: inline-block;
+  width: 543px;
+  color: var(--black-500);
+}
+.more {
+  position: absolute;
+  top: 737px;
+  left: 950px;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--white);
+}
+.bathrooms,
+.bedrooms,
+.div,
+.div1 {
+  position: absolute;
+  top: 505px;
+  left: 1120px;
+  line-height: 120%;
+  color: var(--black-500);
+}
+.bathrooms,
+.div,
+.div1 {
+  top: 508px;
+  left: 1279px;
+  color: var(--black-700);
+}
+.bathrooms,
+.div1 {
+  top: 539px;
+  left: 1120px;
+  color: var(--black-500);
+}
+.div1 {
+  left: 1279px;
+  color: var(--black-700);
+}
+.monthlyRent {
+  top: 573px;
+  left: 1120px;
+  color: var(--black-500);
+  white-space: pre-wrap;
+}
+.div2,
+.kamrul,
+.monthlyRent,
+.tid23545 {
+  position: absolute;
+  line-height: 120%;
+}
+.div2 {
+  top: 573px;
+  left: 1279px;
+  color: var(--black-700);
+}
+.kamrul,
+.tid23545 {
+  top: 0;
+  left: 62px;
+}
+.tid23545 {
+  top: 29px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-1);
+}
+.frameIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+}
+.applyForLeasing,
+.profile {
+  position: absolute;
+  top: 25px;
+  left: 1737px;
+  width: 133px;
+  height: 50px;
+}
+.applyForLeasing {
+  top: 128px;
+  left: 1653px;
+  width: 217px;
+  cursor: pointer;
+}
+.propertyDetails {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  height: 1207px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+  font-family: var(--font-poppins);
+}

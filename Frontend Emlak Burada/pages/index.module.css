@@ -1,0 +1,31 @@
+.loginForm,
+.loginFormChild {
+  position: absolute;
+  width: 744px;
+  height: 775px;
+}
+.loginFormChild {
+  top: 0;
+  left: calc(50% - 372px);
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+}
+.loginForm {
+  top: 124px;
+  left: calc(50% - 373px);
+}
+.iconRight {
+  position: absolute;
+  top: 519px;
+  left: 1184px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.loginPage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  height: 1024px;
+  overflow: hidden;
+}

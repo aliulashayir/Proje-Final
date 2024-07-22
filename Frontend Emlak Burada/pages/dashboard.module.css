@@ -1,0 +1,485 @@
+.dashboardChild {
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 1920px;
+  height: 100px;
+}
+.dashboardChild,
+.dashboardInner,
+.dashboardItem {
+  left: 0;
+  background-color: var(--white);
+}
+.dashboardItem {
+  position: absolute;
+  top: 103px;
+  width: 1920px;
+  height: 100px;
+}
+.dashboardInner {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 310px;
+  height: 1020px;
+}
+.dashboardInner,
+.groupIcon,
+.tms {
+  position: absolute;
+}
+.tms {
+  top: 0;
+  left: 85.9px;
+  line-height: 120%;
+}
+.groupIcon {
+  height: 75%;
+  width: 57.83%;
+  top: 12.5%;
+  right: 42.17%;
+  bottom: 12.5%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.logo,
+.tmsParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 139.9px;
+  height: 32px;
+}
+.logo {
+  top: 50px;
+  left: 85px;
+  width: 140px;
+  font-size: 27px;
+  color: #00568d;
+}
+.dashboard1 {
+  position: absolute;
+  top: 141px;
+  left: 356px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--black-800);
+}
+.totalPropertyChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-5xs);
+  background-color: var(--primary-color);
+  width: 360px;
+  height: 127px;
+}
+.div {
+  position: absolute;
+  top: 59px;
+  left: 25px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  font-weight: 600;
+}
+.totalProperty,
+.totalUnitChild {
+  position: absolute;
+  width: 360px;
+  height: 127px;
+}
+.totalProperty {
+  top: 244px;
+  left: 340px;
+  font-size: var(--font-size-base);
+  color: var(--white);
+}
+.totalUnitChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+}
+.div1 {
+  position: absolute;
+  top: 59px;
+  left: 25px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  font-weight: 600;
+  color: var(--black-800);
+}
+.totalUnit {
+  position: absolute;
+  top: 244px;
+  left: 730px;
+  width: 360px;
+  height: 127px;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+}
+.totalIncome {
+  top: 25px;
+  left: 25px;
+  line-height: 120%;
+}
+.div3,
+.income,
+.totalIncome {
+  position: absolute;
+}
+.income {
+  top: 244px;
+  left: 1120px;
+  width: 360px;
+  height: 127px;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+}
+.div3 {
+  top: 61px;
+  left: 25px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  font-weight: 600;
+  color: var(--black-800);
+}
+.rectangleParent {
+  position: absolute;
+  top: 244px;
+  left: 1510px;
+  width: 360px;
+  height: 127px;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+}
+.property,
+.propertyChild {
+  position: absolute;
+  width: 270px;
+  height: 45px;
+}
+.propertyChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+}
+.property {
+  top: 207px;
+  left: 20px;
+  cursor: pointer;
+  font-size: var(--font-size-xl);
+  color: var(--black-600);
+}
+.packages {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+}
+.rectangleDiv,
+.tenants {
+  position: absolute;
+  width: 270px;
+  height: 45px;
+}
+.tenants {
+  top: 282px;
+  left: 20px;
+  font-size: var(--font-size-xl);
+  color: var(--black-600);
+}
+.rectangleDiv {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--primary-color);
+}
+.dashboard3 {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+  font-weight: 500;
+}
+.dashboard2 {
+  position: absolute;
+  top: 132px;
+  left: 20px;
+  width: 270px;
+  height: 45px;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+}
+.dashboardChild1 {
+  position: absolute;
+  top: 411px;
+  left: 340px;
+  border-radius: var(--br-3xs);
+  background-color: var(--white);
+  width: 750px;
+  height: 293px;
+}
+.paymentHistory {
+  position: absolute;
+  top: 436px;
+  left: 365px;
+  font-size: var(--font-size-lg);
+  line-height: 120%;
+  font-weight: 500;
+  color: var(--neutral-950);
+}
+.amount,
+.paymentDate {
+  top: 482px;
+  color: var(--actions-950);
+}
+.paymentDate {
+  position: absolute;
+  left: 365px;
+  line-height: 120%;
+}
+.amount {
+  left: 654px;
+  text-align: center;
+}
+.amount,
+.september2023,
+.status {
+  position: absolute;
+  line-height: 120%;
+}
+.status {
+  top: 482px;
+  left: 1019px;
+  color: var(--actions-950);
+  text-align: center;
+}
+.september2023 {
+  top: 522px;
+  left: 365px;
+}
+.div4 {
+  top: 522px;
+  left: 649.3px;
+  text-align: center;
+}
+.div4,
+.div5,
+.october2023,
+.paid,
+.paid1 {
+  position: absolute;
+  line-height: 120%;
+}
+.paid {
+  top: 522px;
+  left: 1017px;
+  text-align: center;
+}
+.div5,
+.october2023,
+.paid1 {
+  top: 560px;
+  left: 365px;
+}
+.div5,
+.paid1 {
+  left: 649.3px;
+  text-align: center;
+}
+.paid1 {
+  left: 1017px;
+}
+.div6,
+.november2023,
+.paid2 {
+  position: absolute;
+  top: 598px;
+  left: 365px;
+  line-height: 120%;
+}
+.div6,
+.paid2 {
+  left: 649.3px;
+  text-align: center;
+}
+.paid2 {
+  left: 1017px;
+}
+.seeInvoices {
+  position: relative;
+  line-height: 120%;
+}
+.dashboardChild2,
+.seeInvoicesWrapper {
+  position: absolute;
+  background-color: var(--white);
+}
+.seeInvoicesWrapper {
+  top: 645px;
+  left: 953px;
+  border-radius: var(--br-11xs);
+  border: 1px solid #b7b7b7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 9px;
+  text-align: right;
+  color: var(--primary-color);
+  font-family: var(--typography-small);
+}
+.dashboardChild2 {
+  top: 411px;
+  left: 1120px;
+  border-radius: var(--br-3xs);
+  width: 750px;
+  height: 297px;
+}
+.maintenanceStatus {
+  position: absolute;
+  top: 431px;
+  left: 1140px;
+  font-size: var(--font-size-lg);
+  line-height: 120%;
+  color: var(--neutral-950);
+}
+.inProgress,
+.request001 {
+  position: absolute;
+  top: 0;
+  line-height: 120%;
+}
+.request001 {
+  left: 0;
+  display: inline-block;
+  width: 148px;
+}
+.inProgress {
+  left: 366px;
+  color: var(--neutral-600);
+}
+.request001Parent {
+  position: absolute;
+  top: 474px;
+  left: 1139px;
+  width: 448px;
+  height: 18px;
+  color: var(--neutral-950);
+}
+.completed {
+  position: absolute;
+  top: 0;
+  left: 366px;
+  line-height: 120%;
+  color: var(--primary-color);
+}
+.request002Group,
+.request002Parent {
+  position: absolute;
+  top: 512px;
+  left: 1139px;
+  width: 451px;
+  height: 18px;
+  color: var(--neutral-950);
+}
+.request002Group {
+  top: 550px;
+  width: 428px;
+}
+.frameIcon {
+  position: absolute;
+  top: 474px;
+  left: 1628px;
+  width: 192px;
+  height: 192px;
+  overflow: hidden;
+}
+.ellipseDiv {
+  position: absolute;
+  top: 36px;
+  left: 344px;
+  border-radius: 50%;
+  background-color: var(--white-shade-1);
+  width: 28px;
+  height: 28px;
+}
+.english {
+  position: absolute;
+  top: 42px;
+  left: 381px;
+  font-size: var(--font-size-sm);
+  line-height: 120%;
+  color: var(--black-600);
+}
+.groupInner,
+.groupItem,
+.lineDiv {
+  position: absolute;
+  top: -0.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  width: 16.8px;
+  height: 1px;
+}
+.groupInner,
+.lineDiv {
+  top: 4.8px;
+}
+.lineDiv {
+  top: 10px;
+}
+.lineParent {
+  position: absolute;
+  top: 44.8px;
+  left: 350.1px;
+  width: 15.8px;
+  height: 10.5px;
+}
+.kamrul,
+.tid23545 {
+  position: absolute;
+  top: 0;
+  left: 62px;
+  line-height: 120%;
+}
+.tid23545 {
+  top: 29px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-1);
+}
+.frameIcon1,
+.profile {
+  position: absolute;
+  height: 50px;
+}
+.frameIcon1 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  overflow: hidden;
+}
+.profile {
+  top: 25px;
+  left: 1737px;
+  width: 133px;
+  font-size: var(--font-size-base);
+  color: var(--black-600);
+}
+.dashboard {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--typography-small-size);
+  color: var(--neutral-600);
+  font-family: var(--font-poppins);
+}

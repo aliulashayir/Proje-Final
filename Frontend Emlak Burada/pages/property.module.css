@@ -1,0 +1,178 @@
+.propertyChild,
+.propertyInner,
+.propertyItem {
+  position: absolute;
+  left: 0;
+  background-color: var(--white);
+  width: 1920px;
+  height: 100px;
+}
+.propertyChild {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.propertyInner,
+.propertyItem {
+  top: 103px;
+}
+.propertyInner {
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 310px;
+  height: 1207px;
+}
+.logoIcon {
+  position: absolute;
+  top: 51px;
+  left: 85px;
+  width: 140px;
+  height: 32px;
+}
+.property1 {
+  position: absolute;
+  top: 141px;
+  left: 356px;
+  font-size: var(--font-size-5xl);
+  line-height: 120%;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--black-800);
+}
+.rectangleDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+  background-color: var(--primary-color);
+  width: 270px;
+  height: 45px;
+}
+.property3 {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+  font-weight: 500;
+}
+.property2,
+.tenantsChild {
+  position: absolute;
+  width: 270px;
+  height: 45px;
+}
+.property2 {
+  top: 206px;
+  left: 20px;
+  color: var(--white);
+}
+.tenantsChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-10xs);
+}
+.packages {
+  position: absolute;
+  top: 10px;
+  left: 65px;
+  line-height: 120%;
+}
+.dashboard,
+.tenants {
+  position: absolute;
+  top: 281px;
+  left: 20px;
+  width: 270px;
+  height: 45px;
+}
+.dashboard {
+  top: 131px;
+  cursor: pointer;
+}
+.ellipseDiv {
+  position: absolute;
+  top: 36px;
+  left: 344px;
+  border-radius: 50%;
+  background-color: var(--white-shade-1);
+  width: 28px;
+  height: 28px;
+}
+.english {
+  position: absolute;
+  top: 42px;
+  left: 381px;
+  font-size: var(--font-size-sm);
+  line-height: 120%;
+}
+.groupChild,
+.groupInner,
+.groupItem {
+  position: absolute;
+  top: -0.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  width: 16.8px;
+  height: 1px;
+}
+.groupInner,
+.groupItem {
+  top: 4.8px;
+}
+.groupInner {
+  top: 10px;
+}
+.lineParent {
+  position: absolute;
+  top: 44.8px;
+  left: 350.1px;
+  width: 15.8px;
+  height: 10.5px;
+}
+.kamrul,
+.tid23545 {
+  position: absolute;
+  top: 0;
+  left: 62px;
+  line-height: 120%;
+}
+.tid23545 {
+  top: 29px;
+  font-size: var(--font-size-sm);
+  color: var(--grey-1);
+}
+.frameIcon {
+  top: 0;
+  left: 0;
+  width: 50px;
+  overflow: hidden;
+}
+.applyForLeasing,
+.frameIcon,
+.profile {
+  position: absolute;
+  height: 50px;
+}
+.profile {
+  top: 25px;
+  left: 1737px;
+  width: 133px;
+  font-size: var(--font-size-base);
+}
+.applyForLeasing {
+  top: 128px;
+  left: 1653px;
+  width: 217px;
+  cursor: pointer;
+}
+.property {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-whitesmoke-100);
+  height: 1207px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--black-600);
+  font-family: var(--font-poppins);
+}

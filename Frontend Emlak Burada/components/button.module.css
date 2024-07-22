@@ -1,0 +1,21 @@
+.logIn {
+  position: relative;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.button {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 259.5px);
+  border-radius: var(--br-7xs);
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-211xl);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--white);
+  font-family: var(--font-poppins);
+}
