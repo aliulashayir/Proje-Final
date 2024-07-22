@@ -190,6 +190,7 @@
 .tenants {
   top: 282px;
   left: 20px;
+  cursor: pointer;
   font-size: var(--font-size-xl);
   color: var(--black-600);
 }

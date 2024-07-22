@@ -7,6 +7,10 @@ import styles from "./property-details.module.css";
 const PropertyDetails: NextPage = () => {
   const router = useRouter();
 
+  const onTenantsContainerClick = useCallback(() => {
+    router.push("/packages");
+  }, [router]);
+
   const onDashboardContainerClick = useCallback(() => {
     router.push("/dashboard");
   }, [router]);
@@ -26,7 +30,7 @@ const PropertyDetails: NextPage = () => {
         <div className={styles.propertyChild} />
         <div className={styles.property2}>Property</div>
       </div>
-      <div className={styles.tenants}>
+      <div className={styles.tenants} onClick={onTenantsContainerClick}>
         <div className={styles.tenantsChild} />
         <div className={styles.packages}>Packages</div>
       </div>

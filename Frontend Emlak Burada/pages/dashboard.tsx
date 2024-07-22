@@ -10,6 +10,10 @@ const Dashboard: NextPage = () => {
     router.push("/property");
   }, [router]);
 
+  const onTenantsContainerClick = useCallback(() => {
+    router.push("/packages");
+  }, [router]);
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.dashboardChild} />
@@ -46,7 +50,7 @@ const Dashboard: NextPage = () => {
         <div className={styles.propertyChild} />
         <div className={styles.packages}>Property</div>
       </div>
-      <div className={styles.tenants}>
+      <div className={styles.tenants} onClick={onTenantsContainerClick}>
         <div className={styles.propertyChild} />
         <div className={styles.packages}>Packages</div>
       </div>

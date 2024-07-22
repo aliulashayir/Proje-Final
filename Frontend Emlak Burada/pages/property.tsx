@@ -8,6 +8,10 @@ import styles from "./property.module.css";
 const Property: NextPage = () => {
   const router = useRouter();
 
+  const onTenantsContainerClick = useCallback(() => {
+    router.push("/packages");
+  }, [router]);
+
   const onDashboardContainerClick = useCallback(() => {
     router.push("/dashboard");
   }, [router]);
@@ -27,7 +31,7 @@ const Property: NextPage = () => {
         <div className={styles.rectangleDiv} />
         <div className={styles.property3}>Property</div>
       </div>
-      <div className={styles.tenants}>
+      <div className={styles.tenants} onClick={onTenantsContainerClick}>
         <div className={styles.tenantsChild} />
         <div className={styles.packages}>Packages</div>
       </div>
@@ -56,19 +60,19 @@ const Property: NextPage = () => {
         propLeft="860px"
       />
       <Card
-        rectangle41493="/rectangle-414932@2x.png"
+        rectangle41493="/rectangle-414931@2x.png"
         propTop="701px"
         propOpacity="0"
         propLeft="860px"
       />
       <Card
-        rectangle41493="/rectangle-414932@2x.png"
+        rectangle41493="/rectangle-414931@2x.png"
         propTop="235px"
         propOpacity="0"
         propLeft="1380px"
       />
       <Card
-        rectangle41493="/rectangle-414932@2x.png"
+        rectangle41493="/rectangle-414931@2x.png"
         propTop="701px"
         propOpacity="0"
         propLeft="1380px"

@@ -84,11 +84,11 @@
   left: 20px;
   width: 270px;
   height: 45px;
+  cursor: pointer;
   font-size: var(--font-size-xl);
 }
 .dashboard {
   top: 131px;
-  cursor: pointer;
 }
 .ellipseDiv {
   position: absolute;
