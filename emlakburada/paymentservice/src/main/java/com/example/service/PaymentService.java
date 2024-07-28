@@ -32,14 +32,9 @@ public class PaymentService {
                 .adId(paymentRequestDTO.getAdId())
                 .build();
         Payment savedPayment = paymentRepository.save(payment);
-
-        // Simulate payment processing
         savedPayment.setStatus("COMPLETED");
         paymentRepository.save(savedPayment);
-
-        // Send payment success message to RabbitMQ
         sendPaymentMessage(savedPayment);
-
         return mapToResponseDTO(savedPayment);
     }
 

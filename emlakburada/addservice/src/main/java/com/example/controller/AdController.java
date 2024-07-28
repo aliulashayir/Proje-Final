@@ -21,8 +21,8 @@ public class AdController {
     @PostMapping
     public ResponseEntity<AdResponseDTO> createAd(@RequestBody AdRequestDTO adRequestDTO) {
         log.info("Received request to create ad: {}", adRequestDTO.getTitle());
-        AdResponseDTO adResponseDTO = adService.createAd(adRequestDTO);
-        return new ResponseEntity<>(adResponseDTO, HttpStatus.CREATED);
+        AdResponseDTO createdAd = adService.createAd(adRequestDTO);
+        return ResponseEntity.ok(createdAd);
     }
 
     @PutMapping("/{id}")

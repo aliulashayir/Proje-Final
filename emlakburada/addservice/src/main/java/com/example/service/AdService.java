@@ -1,16 +1,16 @@
 package com.example.service;
 
+import com.example.dto.AdEvent;
 import com.example.dto.AdRequestDTO;
 import com.example.dto.AdResponseDTO;
 import com.example.dto.ReviewRequestDTO;
-import com.example.dto.UserDTO;
 import com.example.exception.AdNotFoundException;
 import com.example.exception.UserNotFoundException;
 import com.example.model.Ad;
 import com.example.model.Payment;
+import com.example.model.User;
 import com.example.repository.AdRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -24,10 +24,9 @@ public class AdService {
     private final AdRepository adRepository;
     private final RestTemplate restTemplate;
     private final RabbitTemplate rabbitTemplate;
-    private final UserClientService userClientService;
 
     public AdResponseDTO createAd(AdRequestDTO adRequestDTO) {
-        if (!userClientService.existsById(adRequestDTO.getUserId())) {
+        if (!userExists(adRequestDTO.getUserId())) {
             throw new UserNotFoundException("User not found with ID: " + adRequestDTO.getUserId());
         }
 
@@ -39,29 +38,16 @@ public class AdService {
                 .build();
         Ad savedAd = adRepository.save(ad);
         sendReviewRequest(savedAd.getId());
-        sendAdCreatedMessage(savedAd.getId());
         return mapToResponseDTO(savedAd);
     }
 
-    private void sendAdCreatedMessage(Long adId) {
-        rabbitTemplate.convertAndSend("adExchange", "ad.created", adId);
-    }
-
-    @RabbitListener(queues = "userQueue")
-    public void handleUserUpdated(UserDTO user) {
-        List<Ad> ads = adRepository.findByUserId(user.getId());
-        ads.forEach(ad -> {
-            ad.setUserId(user.getId());
-            adRepository.save(ad);
-        });
-    }
-
-    @RabbitListener(queues = "paymentQueue")
-    public void handlePaymentNotification(Payment payment) {
-        Ad ad = adRepository.findById(payment.getAdId())
-                .orElseThrow(() -> new AdNotFoundException("Ad not found with ID: " + payment.getAdId()));
-        ad.setStatus("ACTIVE");
-        adRepository.save(ad);
+    private boolean userExists(Long userId) {
+        try {
+            restTemplate.getForObject("http://user-service/api/v1/users/" + userId, Object.class);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public AdResponseDTO updateAd(Long id, AdRequestDTO adRequestDTO) {
@@ -105,10 +91,10 @@ public class AdService {
     }
 
     private void sendReviewRequest(Long adId) {
-        ReviewRequestDTO reviewRequestDTO = new ReviewRequestDTO();
-        reviewRequestDTO.setStatus("IN_REVIEW");
-        reviewRequestDTO.setReviewer("Admin");
-        restTemplate.postForObject("http://review-service/api/v1/reviews/" + adId + "/review", reviewRequestDTO, Void.class);
+        AdEvent adEvent = new AdEvent();
+        adEvent.setAdId(adId);
+        adEvent.setStatus("IN_REVIEW");
+        rabbitTemplate.convertAndSend("reviewExchange", "review.created", adEvent);
     }
 
     private AdResponseDTO mapToResponseDTO(Ad ad) {
@@ -119,5 +105,20 @@ public class AdService {
                 .status(ad.getStatus())
                 .userId(ad.getUserId())
                 .build();
+    }
+
+    // RabbitMQ message handlers
+    public void handleUserUpdated(User user) {
+        List<Ad> ads = adRepository.findByUserId(user.getId());
+        ads.forEach(ad -> {
+            ad.setUserId(user.getId());
+            adRepository.save(ad);
+        });
+    }
+
+    public void handlePaymentNotification(Payment payment) {
+        Ad ad = adRepository.findById(payment.getAdId()).orElseThrow(() -> new AdNotFoundException("Ad not found with ID: " + payment.getAdId()));
+        ad.setStatus("ACTIVE");
+        adRepository.save(ad);
     }
 }

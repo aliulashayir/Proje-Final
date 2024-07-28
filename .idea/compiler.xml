@@ -10,6 +10,7 @@
         <module name="apigateway" />
         <module name="packageservice" />
         <module name="reviewservice" />
+        <module name="adservice" />
         <module name="userservice" />
         <module name="addservice" />
         <module name="paymentservice" />
@@ -23,10 +24,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="packageservice" options="-parameters" />
-      <module name="paymentservice" options="-parameters" />
-      <module name="reviewservice" options="-parameters" />
-      <module name="userservice" options="-parameters" />
+      <module name="packageservice" options="" />
+      <module name="paymentservice" options="" />
+      <module name="reviewservice" options="" />
+      <module name="userservice" options="" />
     </option>
   </component>
 </project>

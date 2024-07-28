@@ -12,16 +12,16 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
-                .group("springshop-public")
-                .pathsToMatch("/api/**")
+                .group("review-service-public")
+                .pathsToMatch("/api/v1/**")
                 .build();
     }
 
     @Bean
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("SpringShop API")
+                .info(new Info().title("Review Service API")
                         .version("1.0")
-                        .description("Spring shop sample application"));
+                        .description("Review Service API documentation"));
     }
 }

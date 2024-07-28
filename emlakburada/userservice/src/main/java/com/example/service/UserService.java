@@ -1,12 +1,13 @@
 package com.example.service;
 
+import com.example.dto.AdEvent;
 import com.example.dto.UserRequestDTO;
 import com.example.dto.UserResponseDTO;
 import com.example.exception.UserNotFoundException;
 import com.example.model.User;
 import com.example.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,6 @@ import java.util.stream.Collectors;
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final RabbitTemplate rabbitTemplate;
 
     public UserResponseDTO saveUser(UserRequestDTO userRequestDTO) {
         User user = User.builder()
@@ -30,7 +30,6 @@ public class UserService {
                 .balance(BigDecimal.ZERO)
                 .build();
         User savedUser = userRepository.save(user);
-        rabbitTemplate.convertAndSend("userExchange", "user.created", savedUser);
         return mapToResponseDTO(savedUser);
     }
 
@@ -44,7 +43,6 @@ public class UserService {
         }
         user.setRole(userRequestDTO.getRole());
         User updatedUser = userRepository.save(user);
-        rabbitTemplate.convertAndSend("userExchange", "user.updated", updatedUser);
         return mapToResponseDTO(updatedUser);
     }
 
@@ -53,13 +51,10 @@ public class UserService {
                 .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + userId));
         user.setBalance(user.getBalance().add(amount));
         userRepository.save(user);
-        rabbitTemplate.convertAndSend("userExchange", "user.balanceUpdated", user);
     }
 
     public List<UserResponseDTO> getAllUsers() {
-        return userRepository.findAll().stream()
-                .map(this::mapToResponseDTO)
-                .collect(Collectors.toList());
+        return userRepository.findAll().stream().map(this::mapToResponseDTO).collect(Collectors.toList());
     }
 
     public UserResponseDTO getUserById(Long id) {
@@ -79,5 +74,10 @@ public class UserService {
                 .role(user.getRole())
                 .balance(user.getBalance())
                 .build();
+    }
+
+    @RabbitListener(queues = "${emlakburada.queue}")
+    public void handleAdCreated(AdEvent adEvent) {
+        // Handle ad created event
     }
 }

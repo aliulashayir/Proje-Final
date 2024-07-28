@@ -17,12 +17,12 @@ public class PaymentController {
     @PostMapping
     public ResponseEntity<PaymentResponseDTO> createPayment(@RequestBody PaymentRequestDTO paymentRequestDTO) {
         PaymentResponseDTO paymentResponseDTO = paymentService.createPayment(paymentRequestDTO);
-        return new ResponseEntity<>(paymentResponseDTO, HttpStatus.CREATED);
+        return ResponseEntity.ok(paymentResponseDTO);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<PaymentResponseDTO> getPaymentDetails(@PathVariable Long id) {
         PaymentResponseDTO paymentResponseDTO = paymentService.getPaymentDetails(id);
-        return new ResponseEntity<>(paymentResponseDTO, HttpStatus.OK);
+        return ResponseEntity.ok(paymentResponseDTO);
     }
 }

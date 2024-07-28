@@ -1,5 +1,6 @@
 package com.example.service;
 
+import com.example.dto.AdEvent;
 import com.example.dto.ReviewRequestDTO;
 import com.example.dto.ReviewResponseDTO;
 import com.example.exception.ReviewNotFoundException;
@@ -9,18 +10,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Service
 @RequiredArgsConstructor
 public class ReviewService {
     private final ReviewRepository reviewRepository;
-
-    @RabbitListener(queues = "adQueue")
-    public void handleAdCreated(Long adId) {
-        // Handle ad creation event, maybe create a review for the ad
-    }
 
     public ReviewResponseDTO reviewAd(Long adId, ReviewRequestDTO reviewRequestDTO) {
         Review review = reviewRepository.findByAdId(adId)
@@ -38,5 +31,15 @@ public class ReviewService {
                 .status(review.getStatus())
                 .reviewer(review.getReviewer())
                 .build();
+    }
+
+    @RabbitListener(queues = "${emlakburada.queue}")
+    public void handleAdCreated(AdEvent adEvent) {
+        Review review = Review.builder()
+                .adId(adEvent.getAdId())
+                .status("IN_REVIEW")
+                .reviewer("Admin")
+                .build();
+        reviewRepository.save(review);
     }
 }
